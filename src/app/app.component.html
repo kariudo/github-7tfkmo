@@ -1,0 +1,27 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Test of in-browser  OCR
+  </h1>
+  <img [src]="fileUrl" width="50%" />
+
+  <br>
+  <button (click)="ocrPage()">OCR</button>&nbsp;
+  <button>OCR & PDF</button>
+
+<hr>
+  <progress *ngIf="progressValue !== 0 && progressValue !== 100"
+  [value]="progressValue" max="100"></progress>
+  <p *ngIf="progressStatus !== ''">
+    {{ progressStatus }}
+  </p>
+  <div *ngIf="htmlResult"> 
+      <h2>Text:</h2>
+      <div [innerHTML]="htmlResult"></div>
+<hr>
+    <h2>Lines:</h2>
+    <ol>
+      <li *ngFor="let line of lines">{{line.text}}</li>
+    </ol>
+  </div>
+</div>
