@@ -7,7 +7,7 @@
 
   <br>
   <button (click)="ocrPage()">OCR</button>&nbsp;
-  <button>OCR & PDF</button>
+  <button (click)="ocrPage(true)">OCR & PDF</button>
 
 <hr>
   <progress *ngIf="progressValue !== 0 && progressValue !== 100"

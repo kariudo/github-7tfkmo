@@ -25,7 +25,7 @@ export class AppComponent {
       'tessedit_create_pdf': '1',
     }:{};
     this.ocrWorker
-      .recognize(this.fileUrl,'eng')
+      .recognize(this.fileUrl,'eng', options)
       .progress((p) => {
       // console.log('progress', p);
 
